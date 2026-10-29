@@ -11,3 +11,6 @@ def isFourOfAKind(hand):
         if ranks.count(rank) >= 4:
             return True
     return False
+
+def isFullHouse(hand):
+    return True
