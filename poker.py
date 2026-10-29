@@ -30,6 +30,10 @@ def isHighCard(hand):
     return True
 
 def isStraight(hand):
+    ranks = sorted([int(card[0]) for card in hand])
+    for i in range(len(ranks) - 1):
+        if ranks[i] + 1 != ranks[i + 1]:
+            return False
     return True
 
 def value_of_hand(hand):
