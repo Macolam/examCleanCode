@@ -36,6 +36,9 @@ def isStraight(hand):
             return False
     return True
 
+def isFlush(hand):
+    return True
+
 def value_of_hand(hand):
     if isFourOfAKind(hand):
         return 60

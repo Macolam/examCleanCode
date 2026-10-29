@@ -55,3 +55,7 @@ def test_is_straight_Should_Return_False_When_Hand_Is_Not_Straight():
 def test_value_Of_Hand_Should_Return_Correct_Value_When_Hand_Is_Straight():
     assert value_of_hand([('14', 'coeur'), ('13', 'pique'), ('12', 'trefles'), ('11', 'trefles'), ('10', 'trefles')]) == 40
     assert value_of_hand([('9', 'coeur'), ('8', 'pique'), ('7', 'trefles'), ('6', 'trefles'), ('5', 'trefles')]) == 40
+
+def test_is_high_card_Should_Return_True_When_Hand_Is_Flush():
+    assert isHighCard([('14', 'coeur'), ('13', 'coeur'), ('6', 'coeur'), ('3', 'coeur'), ('7', 'coeur')]) == True
+    assert isHighCard([('9', 'pique'), ('8', 'pique'), ('13', 'pique'), ('6', 'pique'), ('5', 'pique')]) == True
