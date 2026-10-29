@@ -22,3 +22,7 @@ def test_is_Four_Of_A_Kind_Should_Return_False_When_Hand_Is_Not_Four_Of_A_Kind()
 def test_is_Full_House_Should_Return_True_When_Hand_Is_Full_House():
     assert isFullHouse([('14', 'coeur'), ('14', 'pique'), ('14', 'trefles'), ('3', 'trefles'), ('3', 'carreau')]) == True
     assert isFullHouse([('4', 'coeur'), ('4', 'pique'), ('4', 'trefles'), ('5', 'carreau'), ('5', 'trefles')]) == True
+
+def test_is_Full_House_Should_Return_False_When_Hand_Is_Not_Full_House():
+    assert isFullHouse([('14', 'coeur'), ('13', 'trefles'), ('12', 'trefles'), ('3', 'trefles'), ('6', 'trefles')]) == False
+    assert isFullHouse([('14', 'coeur'), ('13', 'pique'), ('12', 'trefles'), ('3', 'trefles'), ('2', 'trefles')]) == False
