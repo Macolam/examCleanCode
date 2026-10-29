@@ -32,3 +32,6 @@ def test_value_Of_Hand_Should_Return_Correct_Value_When_Hand_Is_Brelan():
 
 def test_value_Of_Hand_Should_Return_Correct_Value_When_Hand_Is_Four_Of_A_Kind():
     assert value_of_hand([('14', 'coeur'), ('14', 'pique'), ('14', 'trefles'), ('14', 'carreau'), ('6', 'trefles')]) == 60 #Four of a kind
+
+def test_value_Of_Hand_Should_Return_Correct_Value_When_Hand_Is_Full_House():
+    assert value_of_hand([('14', 'coeur'), ('14', 'pique'), ('14', 'trefles'), ('3', 'trefles'), ('3', 'carreau')]) == 50 #Full house

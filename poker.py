@@ -29,5 +29,7 @@ def isFullHouse(hand):
 def value_of_hand(hand):
     if isFourOfAKind(hand):
         return 60
+    elif isFullHouse(hand):
+        return 50
     elif isBrelan(hand):
         return 30
