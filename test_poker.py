@@ -27,5 +27,8 @@ def test_is_Full_House_Should_Return_False_When_Hand_Is_Not_Full_House():
     assert isFullHouse([('14', 'coeur'), ('13', 'trefles'), ('12', 'trefles'), ('3', 'trefles'), ('6', 'trefles')]) == False
     assert isFullHouse([('14', 'coeur'), ('13', 'pique'), ('12', 'trefles'), ('3', 'trefles'), ('2', 'trefles')]) == False
 
-def test_value_Of_Hand_Should_Return_Correct_Value():
+def test_value_Of_Hand_Should_Return_Correct_Value_When_Hand_Is_Brelan():
     assert value_of_hand([('14', 'coeur'), ('14', 'pique'), ('14', 'trefles'), ('3', 'trefles'), ('6', 'trefles')]) == 30 #Brelan
+
+def test_value_Of_Hand_Should_Return_Correct_Value_When_Hand_Is_Four_Of_A_Kind():
+    assert value_of_hand([('14', 'coeur'), ('14', 'pique'), ('14', 'trefles'), ('14', 'carreau'), ('6', 'trefles')]) == 60 #Four of a kind
