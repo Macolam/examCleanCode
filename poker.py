@@ -26,6 +26,9 @@ def isFullHouse(hand):
 
     return has_three_of_a_kind and has_pair
 
+def isHighCard(hand):
+    return True
+
 def value_of_hand(hand):
     if isFourOfAKind(hand):
         return 60

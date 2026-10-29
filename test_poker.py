@@ -35,3 +35,6 @@ def test_value_Of_Hand_Should_Return_Correct_Value_When_Hand_Is_Four_Of_A_Kind()
 
 def test_value_Of_Hand_Should_Return_Correct_Value_When_Hand_Is_Full_House():
     assert value_of_hand([('14', 'coeur'), ('14', 'pique'), ('14', 'trefles'), ('3', 'trefles'), ('3', 'carreau')]) == 50 #Full house
+
+def test_is_high_card_Should_Return_True_When_Hand_Is_High_Card():
+    assert isHighCard([('14', 'coeur'), ('13', 'pique'), ('12', 'trefles'), ('3', 'trefles'), ('6', 'trefles')]) == True 
