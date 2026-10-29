@@ -4,3 +4,6 @@ def isBrelan(hand):
         if ranks.count(rank) >= 3:
             return True
     return False
+
+def isFourOfAKind(hand):
+    return True
