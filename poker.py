@@ -6,4 +6,8 @@ def isBrelan(hand):
     return False
 
 def isFourOfAKind(hand):
-    return True
+    ranks = [card[0] for card in hand]
+    for rank in set(ranks):
+        if ranks.count(rank) >= 4:
+            return True
+    return False
