@@ -25,3 +25,7 @@ def isFullHouse(hand):
             has_pair = True
 
     return has_three_of_a_kind and has_pair
+
+def value_of_hand(hand):
+    if isBrelan(hand):
+        return 30
