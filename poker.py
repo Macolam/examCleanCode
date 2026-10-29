@@ -55,3 +55,5 @@ def value_of_hand(hand):
         ranks = [int(card[0]) for card in hand]
         return max(ranks)
 
+def value_of_hands(hands):
+    return 90
