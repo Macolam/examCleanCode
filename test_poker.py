@@ -1,6 +1,12 @@
 from poker import *
 import pytest
 
-def test_isBrelan():
+def test_isBrelan_Should_Return_True_When_Hand_Is_Brelan():
     assert isBrelan([('14', 'coeur'), ('14', 'pique'), ('14', 'trefles'), ('3', 'trefles'), ('6', 'trefles')]) == True
-    assert isBrelan([('14', 'coeur'), ('13', 'pique'), ('14', 'trefles'), ('3', 'trefles'), ('6', 'trefles')]) == False
+    assert isBrelan([('14', 'coeur'), ('13', 'pique'), ('14', 'trefles'), ('3', 'trefles'), ('14', 'carreau')]) == True
+    assert isBrelan([('4', 'coeur'), ('4', 'pique'), ('4', 'trefles'), ('4', 'carreau'), ('14', 'trefles')]) == True
+
+def test_isBrelan_Should_Return_False_When_Hand_Is_Not_Brelan():
+    assert isBrelan([('14', 'coeur'), ('13', 'pique'), ('12', 'trefles'), ('3', 'trefles'), ('6', 'trefles')]) == False
+    assert isBrelan([('14', 'coeur'), ('13', 'pique'), ('12', 'trefles'), ('3', 'trefles'), ('2', 'trefles')]) == False
+    assert isBrelan([('4', 'coeur'), ('5', 'pique'), ('6', 'trefles'), ('7', 'carreau'), ('8', 'trefles')]) == False
