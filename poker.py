@@ -13,4 +13,15 @@ def isFourOfAKind(hand):
     return False
 
 def isFullHouse(hand):
-    return True
+    ranks = [card[0] for card in hand]
+    has_three_of_a_kind = False
+    has_pair = False
+
+    for rank in set(ranks):
+        count = ranks.count(rank)
+        if count == 3:
+            has_three_of_a_kind = True
+        elif count == 2:
+            has_pair = True
+
+    return has_three_of_a_kind and has_pair
