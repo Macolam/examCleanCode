@@ -45,10 +45,13 @@ def value_of_hand(hand):
         return 60
     elif isFullHouse(hand):
         return 50
-    elif isBrelan(hand):
-        return 30
+    elif isFlush(hand):
+        return 45
     elif isStraight(hand):
         return 40
+    elif isBrelan(hand):
+        return 30
     elif isHighCard(hand):
         ranks = [int(card[0]) for card in hand]
         return max(ranks)
+

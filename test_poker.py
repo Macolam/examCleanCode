@@ -64,3 +64,6 @@ def test_is_high_card_Should_Return_False_When_Hand_Is_Flush():
     assert isFlush([('14', 'coeur'), ('13', 'coeur'), ('6', 'coeur'), ('3', 'coeur'), ('7', 'pique')]) == False
     assert isFlush([('9', 'pique'), ('8', 'pique'), ('13', 'pique'), ('6', 'pique'), ('5', 'coeur')]) == False
 
+def test_value_Of_Hand_Should_Return_Correct_Value_When_Hand_Is_Flush():
+    assert value_of_hand([('14', 'coeur'), ('13', 'coeur'), ('6', 'coeur'), ('3', 'coeur'), ('7', 'coeur')]) == 45
+    assert value_of_hand([('9', 'pique'), ('8', 'pique'), ('13', 'pique'), ('6', 'pique'), ('5', 'pique')]) == 45
