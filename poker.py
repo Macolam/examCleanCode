@@ -37,7 +37,8 @@ def isStraight(hand):
     return True
 
 def isFlush(hand):
-    return True
+    suits = [card[1] for card in hand]
+    return len(set(suits)) == 1
 
 def value_of_hand(hand):
     if isFourOfAKind(hand):

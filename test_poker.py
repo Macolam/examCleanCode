@@ -63,3 +63,4 @@ def test_is_high_card_Should_Return_True_When_Hand_Is_Flush():
 def test_is_high_card_Should_Return_False_When_Hand_Is_Flush():
     assert isFlush([('14', 'coeur'), ('13', 'coeur'), ('6', 'coeur'), ('3', 'coeur'), ('7', 'pique')]) == False
     assert isFlush([('9', 'pique'), ('8', 'pique'), ('13', 'pique'), ('6', 'pique'), ('5', 'coeur')]) == False
+
