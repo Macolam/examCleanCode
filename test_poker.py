@@ -14,3 +14,7 @@ def test_isBrelan_Should_Return_False_When_Hand_Is_Not_Brelan():
 def test_is_Four_Of_A_Kind_Should_Return_True_When_Hand_Is_Four_Of_A_Kind():
     assert isFourOfAKind([('14', 'coeur'), ('14', 'pique'), ('14', 'trefles'), ('14', 'carreau'), ('6', 'trefles')]) == True
     assert isFourOfAKind([('4', 'coeur'), ('4', 'pique'), ('4', 'trefles'), ('4', 'carreau'), ('14', 'trefles')]) == True
+
+def test_is_Four_Of_A_Kind_Should_Return_False_When_Hand_Is_Not_Four_Of_A_Kind():
+    assert isFourOfAKind([('14', 'coeur'), ('13', 'pique'), ('12', 'trefles'), ('3', 'trefles'), ('6', 'trefles')]) == False
+    assert isFourOfAKind([('14', 'coeur'), ('13', 'pique'), ('12', 'trefles'), ('3', 'trefles'), ('2', 'trefles')]) == False
