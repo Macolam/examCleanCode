@@ -36,3 +36,6 @@ def value_of_hand(hand):
         return 50
     elif isBrelan(hand):
         return 30
+    elif isHighCard(hand):
+        ranks = [int(card[0]) for card in hand]
+        return max(ranks)

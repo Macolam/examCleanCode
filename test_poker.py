@@ -38,3 +38,8 @@ def test_value_Of_Hand_Should_Return_Correct_Value_When_Hand_Is_Full_House():
 
 def test_is_high_card_Should_Return_True_When_Hand_Is_High_Card():
     assert isHighCard([('14', 'coeur'), ('13', 'pique'), ('12', 'trefles'), ('3', 'trefles'), ('6', 'trefles')]) == True 
+
+def test_value_Of_Hand_Should_Return_Correct_Value_When_Hand_Is_High_Card():
+    assert value_of_hand([('14', 'coeur'), ('13', 'pique'), ('12', 'trefles'), ('3', 'trefles'), ('6', 'trefles')]) == 14
+    assert value_of_hand([('8', 'coeur'), ('13', 'pique'), ('12', 'trefles'), ('3', 'trefles'), ('6', 'trefles')]) == 13
+    assert value_of_hand([('2', 'coeur'), ('3', 'pique'), ('4', 'trefles'), ('5', 'trefles'), ('6', 'trefles')]) == 6
