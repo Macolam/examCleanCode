@@ -29,6 +29,9 @@ def isFullHouse(hand):
 def isHighCard(hand):
     return True
 
+def isStraight(hand):
+    return True
+
 def value_of_hand(hand):
     if isFourOfAKind(hand):
         return 60
